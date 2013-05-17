@@ -1,0 +1,12 @@
+{
+	"template_dir": "app", 
+	"content_dir": "contents",
+	"output_dir": "output",
+
+	"server": { 
+		"port": 9009
+	},
+	"plugins": {
+		"template_engine": "punch-engine-jade"
+	}
+}

@@ -1,0 +1,12 @@
+{
+  "name": "angular-punch-seed",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "~1.0.6"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ]
+}
