@@ -7,6 +7,9 @@
 		"port": 9009
 	},
 	"plugins": {
-		"template_engine": "punch-engine-jade"
+		"template_engine": "punch-engine-jade",
+		"compilers": {
+			".css": "punch-stylus-compiler"
+		}
 	}
 }

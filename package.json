@@ -10,6 +10,7 @@
   "author": "",
   "license": "",
   "devDependencies": {
-    "punch-engine-jade": "git://github.com/blakeblackshear/punch-engine-jade.git"
+    "punch-engine-jade": "git://github.com/blakeblackshear/punch-engine-jade.git",
+    "punch-stylus-compiler": "0.0.1"
   }
 }
