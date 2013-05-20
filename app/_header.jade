@@ -7,6 +7,7 @@ html
 		meta(name="viewport", content="width=device-width")
 
 		title #{title}
-	body
-		header
-			h1 #{title}
+
+		- if(typeof(app_css) !== 'undefined')
+			link(rel="stylesheet", href="#{app_css}")
+		style [ng-cloak] { display: none; }
