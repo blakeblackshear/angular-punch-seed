@@ -9,5 +9,8 @@
     "**/.*",
     "node_modules",
     "components"
-  ]
+  ],
+  "devDependencies": {
+    "angular-mocks": "~1.0.6"
+  }
 }

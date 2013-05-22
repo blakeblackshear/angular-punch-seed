@@ -1,5 +1,5 @@
 require
-	baseUrl: '_example/scripts'
+	baseUrl: '/_example/scripts'
 
 	paths:
 		'lib': '../../lib'
