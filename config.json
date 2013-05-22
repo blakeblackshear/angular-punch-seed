@@ -11,5 +11,8 @@
 		"compilers": {
 			".css": "punch-stylus-compiler"
 		}
-	}
+	},
+	"stylus": {
+		"includeRoots": true
+	} 
 }
