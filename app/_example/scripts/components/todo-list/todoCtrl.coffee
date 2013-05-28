@@ -6,12 +6,12 @@ class TodoCtrl
 			newTodo: ""
 			editedTodo: null
 			location: @location
-			addTodo: @addTodo.bind @
-			editTodo: @editTodo.bind @
-			doneEditing: @doneEditing.bind @
-			removeTodo: @removeTodo.bind @
-			clearCompletedTodos: @clearCompletedTodos.bind @
-			markAll: @markAll.bind @
+			addTodo: @addTodo
+			editTodo: @editTodo
+			doneEditing: @doneEditing
+			removeTodo: @removeTodo
+			clearCompletedTodos: @clearCompletedTodos
+			markAll: @markAll
 
 		@todos = @scope.todos = @todoStorage.get()
 
@@ -29,7 +29,7 @@ class TodoCtrl
 		@scope.$watch "location.path()", (path) =>
 			@scope.statusFilter = (if (path is "/active") then completed: false else (if (path is "/completed") then completed: true else null))
 
-	addTodo: ->
+	addTodo: =>
 		return unless @scope.newTodo.length
 		@todos.push
 			title: @scope.newTodo
@@ -37,22 +37,22 @@ class TodoCtrl
 
 		@scope.newTodo = ""
 
-	editTodo: (todo) ->
+	editTodo: (todo) =>
 		@scope.editedTodo = todo
 
-	doneEditing: (todo) ->
+	doneEditing: (todo) =>
 		@scope.editedTodo = null
 		@scope.removeTodo todo  unless todo.title
 
-	removeTodo: (todo) ->
+	removeTodo: (todo) =>
 		@todos.splice @todos.indexOf(todo), 1
 
-	clearCompletedTodos: ->
+	clearCompletedTodos: =>
 		@scope.todos = @todos = @todos.filter((val) ->
 			not val.completed
 		)
 
-	markAll: (completed) ->
+	markAll: (completed) =>
 		@todos.forEach (todo) ->
 			todo.completed = completed
 
