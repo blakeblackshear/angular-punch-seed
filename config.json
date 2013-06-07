@@ -14,5 +14,10 @@
 	},
 	"stylus": {
 		"includeRoots": true
-	} 
+	},
+	"proxy": {
+		"path": "/api1/",
+		"host": "demo.nextgxdx.com",
+		"port": 80
+	}
 }

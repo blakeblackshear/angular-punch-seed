@@ -11,6 +11,11 @@
   "license": "",
   "devDependencies": {
     "punch-engine-jade": "git://github.com/blakeblackshear/punch-engine-jade.git",
-    "punch-stylus-compiler": "git://github.com/blakeblackshear/punch-stylus-compiler.git"
+    "punch-stylus-compiler": "git://github.com/blakeblackshear/punch-stylus-compiler.git",
+    "punch": "~0.5.29",
+    "connect": "~2.7.11",
+    "underscore": "~1.4.4",
+    "http-accept": "~0.1.1-3",
+    "http-proxy": "~0.10.2"
   }
 }
