@@ -17,7 +17,7 @@
 	},
 	"proxy": {
 		"path": "/api1/",
-		"host": "demo.nextgxdx.com",
-		"port": 80
+		"host": "host.server.com",
+		"port": 3000
 	}
 }

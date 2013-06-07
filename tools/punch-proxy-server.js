@@ -19,11 +19,6 @@ module.exports = {
 		var proxy = new httpProxy.RoutingProxy({
 			changeOrigin: true
 		});
-		
-		var endpoint = {
-			host: config.proxy.host,
-			port: config.proxy.port
-		};
 
 		// log requests
 		app.use( connect.logger("short") );
@@ -39,7 +34,11 @@ module.exports = {
 
 		app.use( function(req, res, next){
 			if(req.url.indexOf(config.proxy.path) === 0){
-				proxy.proxyRequest(req, res, endpoint);
+				req.url = req.url.substring(config.proxy.path);
+				proxy.proxyRequest(req, res, {
+					host: config.proxy.host,
+					port: config.proxy.port
+				});
 			}
 			else{
 				return next();
