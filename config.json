@@ -10,6 +10,9 @@
 		"template_engine": "punch-engine-jade",
 		"compilers": {
 			".css": "punch-stylus-compiler"
+		},
+		"publishers": {
+			"s3-publish": "punch-s3-publish"
 		}
 	},
 	"stylus": {
@@ -19,5 +22,18 @@
 		"path": "/api1/",
 		"host": "host.server.com",
 		"port": 3000
-	}
+	},
+	"publish" : {
+		"strategy" : "s3-publish",
+		"options" : {
+			"credentials": {
+				"file": ".awscred"
+			},
+			"remove_html_extensions": true,
+			"s3_options" : {
+				"Bucket" : "www.example.com",
+				"ACL" : "public-read"
+			}
+		}
+	} 
 }
